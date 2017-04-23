@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import Input from './../../atoms/Input'
+import { login } from '../../actions/loginAction';
+
 import './Login.css';
 
 class Login extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.sighIn = this.sighIn.bind(this)
+  }
+
   render() {
     return (
       <div className="form">
         <form action="#">
-          <div className="text-input">
-            <label htmlFor="username">Username</label>
-            <input type="text" name="username" id="username" placeholder="" />
-            <span className="separator"> </span>
-          </div>
+          <Input
+            fieldName='Username'
+            type='text'
+          />
 
-          <div className="text-input">
-            <label htmlFor="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="" />
-            <span className="separator" />
-          </div>
+          <Input
+            fieldName='Password'
+            type='password'
+          />
 
           <div className="form-bottom">
-            <input type="submit" id="submit" value="Login"/>
+            <input type="submit" onClick={this.sighIn}  id="submit" value="Login"/>
           </div>
 
           <div className="form-bottom footer-links">
@@ -33,6 +43,18 @@ class Login extends Component {
       </div>
     );
   }
+
+  sighIn() {
+    this.props.login(this.props.testLogin)
+  }
 }
 
-export default Login;
+function mapStateToProps({ testLogin }) {
+  return { testLogin };
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ login }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
