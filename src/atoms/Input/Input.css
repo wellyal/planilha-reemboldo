@@ -31,26 +31,6 @@ input[type="password"]:focus + .separator {
   opacity: 1;
 }
 
-.form form input[type="submit"] {
-  color: white;
-  background: #8470FF;
-  padding: 1em 1.4em;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 30px;
-  width: 100%;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #7b66f9
-}
-
-input[type="submit"]:disabled {
-  background-color: #b0a4f9;
-  opacity: .5
-}
-
 .separator {
   height: 1px;
   width: 100%;

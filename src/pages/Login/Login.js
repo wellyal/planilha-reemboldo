@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Input from './../../atoms/Input'
+import Button from './../../atoms/Button'
 import { login } from '../../actions/loginAction';
 
 import './Login.css';
@@ -19,18 +20,21 @@ class Login extends Component {
       <div className="form">
         <form action="#">
           <Input
-            fieldName='Username'
-            type='text'
+            fieldName="Username"
+            type="text"
           />
 
           <Input
-            fieldName='Password'
-            type='password'
+            fieldName="Password"
+            type="password"
           />
 
           <div className="form-bottom">
-            <input type="submit" onClick={this.sighIn}  id="submit" value="Login"/>
+            <Button
+              buttonName="Login"
+            />
           </div>
+
 
           <div className="form-bottom footer-links">
             <a>forgot password</a>
