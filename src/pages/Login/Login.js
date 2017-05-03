@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Input from './../../atoms/Input'
 import Button from './../../atoms/Button'
-import { login } from '../../actions/loginAction';
+import { login } from '../../actions';
 
 import './Login.css';
 
@@ -12,10 +12,11 @@ class Login extends Component {
   constructor(props) {
     super(props);
 
-    this.sighIn = this.sighIn.bind(this)
+    this.login = this.login.bind(this)
   }
 
   render() {
+    console.log(this.props.userLogin.isLogged)
     return (
       <div className="form">
         <form action="#">
@@ -32,6 +33,7 @@ class Login extends Component {
           <div className="form-bottom">
             <Button
               buttonName="Login"
+              onClick={this.login}
             />
           </div>
 
@@ -48,13 +50,13 @@ class Login extends Component {
     );
   }
 
-  sighIn() {
-    this.props.login(this.props.testLogin)
+  login() {
+    this.props.login(this.props.userLogin.isLogged)
   }
 }
 
-function mapStateToProps({ testLogin }) {
-  return { testLogin };
+function mapStateToProps({ userLogin }) {
+  return { userLogin };
 }
 
 function mapDispatchToProps(dispatch) {

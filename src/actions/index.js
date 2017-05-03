@@ -1,9 +1,8 @@
-export const TEST_LOGIN = 'TEST_LOGIN';
+import * as ACTION_TYPES from './types'
 
 export const login = (currentStatus = false) => {
-  console.log(currentStatus)
   return {
-    type: TEST_LOGIN,
+    type: ACTION_TYPES.LOGIN,
     payload: { isLogged: !currentStatus }
   }
 }
