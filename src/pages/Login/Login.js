@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import Input from './../../atoms/Input'
 import Button from './../../atoms/Button'
-import { login } from '../../actions';
+import { login } from '../../actions'
 
+import LockIcon from 'react-icons/lib/ti/lock-closed'
 import './Login.css';
 
 class Login extends Component {
@@ -16,36 +17,46 @@ class Login extends Component {
   }
 
   render() {
-    console.log(this.props.userLogin.isLogged)
     return (
-      <div className="form">
-        <form action="#">
-          <Input
-            fieldName="Username"
-            type="text"
-          />
-
-          <Input
-            fieldName="Password"
-            type="password"
-          />
-
-          <div className="form-bottom">
-            <Button
-              buttonName="Login"
-              onClick={this.login}
+      <div className="login-container">
+        <div className="login__header">
+          <figure className="header__login-icon">
+            <LockIcon
+              size={50}
+              color="white"
             />
-          </div>
+          </figure>
+        </div>
 
+        <div className="form">
+          <form action="#">
+            <Input
+              fieldName="Username"
+              type="text"
+            />
 
-          <div className="form-bottom footer-links">
-            <a>forgot password</a>
-          </div>
+            <Input
+              fieldName="Password"
+              type="password"
+            />
 
-          <div className="form-bottom footer-links">
-            <a>create account</a>
-          </div>
-        </form>
+            <div className="form-bottom">
+              <Button
+                buttonName="Login"
+                onClick={this.login}
+              />
+
+              <div className="footer-links">
+                <div className="footer-links__item">
+                  <a>forgot password</a>
+                </div>
+                <div className="footer-links__item">
+                  <a>create account</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

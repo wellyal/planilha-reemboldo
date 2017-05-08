@@ -1,4 +1,4 @@
-import * as ACTION_TYPES from '../actions/types'
+import * as ACTION_TYPES from '../../actions/types'
 
 const userLogin = (state = false, action = {}) => {
   switch(action.type) {

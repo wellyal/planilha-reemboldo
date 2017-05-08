@@ -1,35 +1,56 @@
-/**
-*Those Vars
-*/
+.login-container {
+  position: relative;
+  margin: auto;
+  width: 430px;
+  height: 420px;
+  top: 40px;
+  left: 0;
+  z-index: 200;
+  right: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 10px;
+}
+
+.login-container .header__login-icon {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 70px;
+}
+
+.login__header {
+  background-color: #8470FF;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 70px;
+}
 
 .form {
-  width: 400px;
-  margin: 0 auto;
-  text-align: left;
-  margin-top: 10em;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 55px 55px 20px;
-  background: #fff;
-  box-shadow: 0 0 9px 2px #dddddd;
+  margin: 30px 55px 20px;
 }
 
 .form-bottom {
-  margin-top: 1.25em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  margin-top: 50px;
+  text-align: center;
 }
 
 .footer-links {
-  text-align: center;
   width: 100%;
+  margin-top: 15px;
+  text-align: center;
   display: inline-block;
   font-size: 15px;
   cursor: pointer;
 }
 
-.footer-links:hover {
+.footer-links__item {
+  margin-bottom: 5px;
+}
+
+.footer-links__item:hover {
   text-decoration: underline;
 }
 
