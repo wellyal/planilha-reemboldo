@@ -31,11 +31,13 @@ class Login extends Component {
         <div className="form">
           <form action="#">
             <Input
+              required="true"
               fieldName="Username"
               type="text"
             />
 
             <Input
+              required="true"
               fieldName="Password"
               type="password"
             />

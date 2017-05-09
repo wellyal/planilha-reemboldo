@@ -1,0 +1,23 @@
+.user-area {
+  display: flex;
+  justify-content: center;
+  padding: 6px 15px;
+  background: #5c4eb2;
+  cursor: pointer;
+}
+
+.user-area__img img {
+  width: 45px;
+  height: 45px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.user-area__name {
+  margin: 12px;
+  color: white;
+}
+
+.user-area__arrow {
+  margin: 10px 0;
+}

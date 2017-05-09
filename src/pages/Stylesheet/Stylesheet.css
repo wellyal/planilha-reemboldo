@@ -1,18 +1,3 @@
-.topbar {
-  width: 100%;
-  height: 60px;
-  background-color: #8470FF;
-  display: flex;
-  justify-content: space-between;
-}
-
-.topbar__menu {
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  margin: 0 15px;
-}
-
 .form-group {
   display: flex;
   justify-content: space-around;
@@ -22,37 +7,3 @@
 .form-group__item {
   padding: 0 10px;
 }
-
-.topbar__user-area {
-  display: flex;
-  justify-content: center;
-  padding: 6px 15px;
-  background: #5c4eb2;
-  cursor: pointer;
-}
-
-.topbar__user-area .user-area__img img {
-  width: 45px;
-  height: 45px;
-  border: 2px solid white;
-  border-radius: 50%;
-}
-
-.topbar__user-area .user-area__name {
-  margin: 12px;
-  color: white;
-}
-
-.user-area__arrow {
-  margin: 10px 0;
-}
-
-.user-area__title {
-  display: flex;
-  font-size: 25px;
-  color: white;
-  font-weight: bold;
-  justify-content: center;
-  flex-direction: column;
-}
-

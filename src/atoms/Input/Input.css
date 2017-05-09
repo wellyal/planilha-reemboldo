@@ -25,7 +25,9 @@ input[type="password"] {
 }
 
 input[type="text"]:focus + .separator,
-input[type="password"]:focus + .separator {
+input[type="text"]:valid + .separator,
+input[type="password"]:focus + .separator,
+input[type="password"]:valid + .separator {
   transition: transform 0.2s ease-in-out;
   transform: scaleX(1) translateY(-2px);
   opacity: 1;
