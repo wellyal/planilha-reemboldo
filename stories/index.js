@@ -10,3 +10,7 @@ storiesOf('Button', module)
   .add('favicon', () => (
     <Button className="favicon" onClick={action('clicked')} buttonName="+"/>
   ))
+
+  .add('disabled', () => (
+    <Button disabled onClick={action('clicked')} buttonName="Confirmar"/>
+  ))
