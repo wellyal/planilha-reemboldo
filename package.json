@@ -45,6 +45,8 @@
   },
   "dependencies": {
     "autoprefixer": "^6.7.2",
+    "class-autobind": "^0.1.4",
+    "classnames": "^2.2.5",
     "postcss-calc": "^6.0.0",
     "postcss-color-function": "^3.0.0",
     "postcss-import": "^9.1.0",

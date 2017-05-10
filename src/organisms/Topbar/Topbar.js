@@ -1,16 +1,13 @@
 import React from 'react'
 import UserMenu from './../../molecules/UserMenu'
-import MenuIcon from 'react-icons/lib/fa/align-justify'
+import MainMenu from './../../molecules/MainMenu'
 
 import './Topbar.css'
 
 const Topbar = () =>
   <header className="topbar">
     <section className="topbar__menu">
-      <MenuIcon
-        color="white"
-        fontSize={30}
-      />
+      <MainMenu />
     </section>
 
     <section className="topbar__title">
