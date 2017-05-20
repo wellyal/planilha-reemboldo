@@ -1,1 +1,1 @@
-export const LOGIN = 'planilha_reembolso/login/LOGIN';
+export const SIGNIN = 'planilha_reembolso/signin/SIGNIN';

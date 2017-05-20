@@ -1,0 +1,31 @@
+.file-area {
+  text-align: center;
+}
+
+.file-area svg {
+  cursor: pointer;
+}
+
+.file-area svg:hover {
+  fill: #0951a3;
+}
+
+.file-area__file-name {
+  font-size: 13px;
+  display: block;
+}
+
+.input-file {
+  margin-top: 30px;
+}
+
+.input-file .input-label {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.input-file input {
+  display: none;
+  outline: none;
+}

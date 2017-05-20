@@ -1,0 +1,24 @@
+.navigation__list {
+  display: flex;
+  height: 100%;
+}
+
+.navigation-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.navigation-item a {
+  color: #fff;
+  padding: 0 10px;
+  display: block;
+}
+
+.navigation-item:hover {
+  background: #0951a3;
+  color: #fff;
+}

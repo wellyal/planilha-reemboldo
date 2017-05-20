@@ -1,8 +1,9 @@
 import * as ACTION_TYPES from './types'
 
-export const login = (currentStatus = false) => {
+export const doSignIn = (currentStatus = false) => {
+  console.log('bla', currentStatus)
   return {
-    type: ACTION_TYPES.LOGIN,
-    payload: { isLogged: !currentStatus }
+    type: ACTION_TYPES.SIGNIN,
+    payload: !currentStatus
   }
 }

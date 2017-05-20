@@ -1,0 +1,64 @@
+.signin-container {
+  position: relative;
+  margin: auto;
+  width: 430px;
+  height: 460px;
+  top: 40px;
+  z-index: 200;
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 10px;
+}
+
+.signin-container .header__signin-icon {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 70px;
+}
+
+.signin__header {
+  background-color: #022b56;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 70px;
+}
+
+.signin-container__disclaimer {
+  background: #2c6cc3;
+  color: white;
+  text-align: center;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form {
+  margin: 30px 55px 20px;
+}
+
+.form-bottom {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.footer-links {
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.footer-links__item {
+  margin-bottom: 5px;
+}
+
+.footer-links__item:hover {
+  text-decoration: underline;
+}
+

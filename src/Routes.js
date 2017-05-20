@@ -4,14 +4,14 @@ import {
   Route
 } from 'react-router-dom'
 
-import Login from './pages/Login'
-import Home from './pages/Home'
-import Stylesheet from './pages/Stylesheet'
+import SignIn from './components/pages/SignIn'
+import Home from './components/pages/Home'
+import Stylesheet from './components/pages/Stylesheet'
 
 const Routes = ({ store }) => (
   <Router>
     <div>
-      <Route path="/login" component={Login} />
+      <Route path="/signIn" component={SignIn} />
       <Route path="/home" component={Home} />
       <Route path="/stylesheet" component={Stylesheet} />
     </div>
