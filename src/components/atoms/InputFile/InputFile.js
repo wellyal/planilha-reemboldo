@@ -20,7 +20,9 @@ class InputFile extends Component {
     return (
       <div className="file-area input-file">
         <label htmlFor="inputFile">
-          <UploadIcon fontSize={60} color="#2c6cc3" />
+          <figure className="input-file__icon">
+            <UploadIcon fontSize={60} color="#2c6cc3" />
+          </figure>
           {
             fileName &&
               <span className="file-area__file-name">{ fileName }</span>

@@ -4,6 +4,7 @@ import DeleteIcon from 'react-icons/lib/ti/trash'
 import Input from 'components/atoms/Input'
 import Topbar from 'components/organisms/Topbar'
 import InputFile from 'components/atoms/InputFile'
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import './Stylesheet.css'
 
 const Stylesheet = () => {
@@ -13,41 +14,53 @@ const Stylesheet = () => {
       <div>
         <InputFile />
       </div>
-      <section className="form-group">
-        <div className="form-group__item">
-          <Input
-            required="true"
-            fieldName="Date"
-            type="date"
-          />
-        </div>
-        <div className="form-group__item">
-          <Input
-            required="true"
-            fieldName="Type"
-            type="text"
-          />
-        </div>
-        <div className="form-group__item">
-          <Input
-            required="true"
-            fieldName="Value"
-            type="text"
-          />
-        </div>
-        <div className="form-group__item">
-          <Input
-            required="true"
-            fieldName="Comment"
-            type="text"
-          />
-        </div>
-        <div className="form-group__item">
-          <button className="favicon">
-            +
-          </button>
-        </div>
-      </section>
+      <Grid fluid>
+        <section className="form-group">
+          <Row>
+            <Col xs={12} sm={6} md={3}>
+              <div className="form-group__item">
+                <Input
+                  required="true"
+                  fieldName="Date"
+                  type="date"
+                />
+              </div>
+            </Col>
+            <Col xs={12} sm={6} md={3}>
+              <div className="form-group__item">
+                <Input
+                  required="true"
+                  fieldName="Type"
+                  type="text"
+                />
+              </div>
+            </Col>
+            <Col xs={12} sm={6} md={3}>
+              <div className="form-group__item">
+                <Input
+                  required="true"
+                  fieldName="Value"
+                  type="text"
+                />
+              </div>
+            </Col>
+            <Col xs={12} sm={6} md={3}>
+              <div className="form-group__item">
+                <Input
+                  required="true"
+                  fieldName="Comment"
+                  type="text"
+                />
+              </div>
+            </Col>
+            <Col xsOffset={10} xs={2} smOffset={11} sm={1}>
+              <div className="form-group__item">
+                <button className="favicon">+</button>
+              </div>
+            </Col>
+          </Row>
+        </section>
+      </Grid>
 
       <section className="form-group-table">
         <ul className="form-group-col actions">
@@ -92,7 +105,6 @@ const Stylesheet = () => {
           <li className="form-group-table__row">40,00</li>
           <li className="form-group-table__row">150,00</li>
         </ul>
-
       </section>
     </div>
   )

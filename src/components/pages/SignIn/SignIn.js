@@ -9,10 +9,11 @@ class SignIn extends Component {
   constructor(props) {
     super(props);
 
-    this.signIn = this.signIn.bind(this)
+    this.signin = this.signin.bind(this)
   }
 
   render() {
+    console.log(this.props.auth)
     return (
       <div className="signin-container">
         <div className="signin__header">
@@ -45,7 +46,7 @@ class SignIn extends Component {
             <div className="form-bottom">
               <Button
                 buttonName="Entrar"
-                onClick={this.signIn}
+                onClick={this.signin}
               />
 
               <div className="footer-links">
@@ -63,9 +64,9 @@ class SignIn extends Component {
     );
   }
 
-  signIn(event) {
+  signin(event) {
     event.preventDefault()
-    this.props.doSignIn(this.props.signIn)
+    this.props.authenticate(this.props.auth)
   }
 }
 

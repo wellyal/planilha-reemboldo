@@ -12,17 +12,19 @@
 
 .file-area__file-name {
   font-size: 13px;
-  display: block;
+}
+
+.input-file__icon {
+
 }
 
 .input-file {
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .input-file .input-label {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
 }
 
 .input-file input {
