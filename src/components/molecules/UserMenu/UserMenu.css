@@ -1,9 +1,11 @@
 .user-area {
   display: flex;
-  justify-content: center;
-  padding: 3px 15px;
+  justify-content: space-around;
+  align-items: center;
   background: #2c6cc3;
   cursor: pointer;
+  height: 100%;
+  width: 245px;
 }
 
 .user-area__img img {
@@ -14,12 +16,10 @@
 }
 
 .user-area__name {
-  margin: 12px;
   color: white;
 }
 
 .user-area__arrow {
-  margin: 10px 0;
 }
 
 .user-menu-list {
@@ -30,7 +30,7 @@
   top: 60px;
   right: 0;
   z-index: 19;
-  width: 264px;
+  width: 245px;
 }
 
 .user-menu-item {

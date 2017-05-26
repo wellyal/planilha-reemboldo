@@ -20,6 +20,7 @@ const Stylesheet = () => {
             <Col xs={12} sm={6} md={3}>
               <div className="form-group__item">
                 <Input
+                  value=""
                   required="true"
                   fieldName="Date"
                   type="date"
