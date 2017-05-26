@@ -1,7 +1,7 @@
 
 export const AUTHENTICATE = 'planilha_reembolso/signin/AUTHENTICATE';
 
-export default function reducer (state = false, action) {
+export default function reducer (state = {}, action) {
   switch(action.type) {
     case AUTHENTICATE:
       return action.payload
@@ -10,9 +10,9 @@ export default function reducer (state = false, action) {
   }
 }
 
-export const authenticate = (currentStatus = false) => {
+export const authenticate = (payload) => {
   return {
     type: AUTHENTICATE,
-    payload: !currentStatus
+    payload: payload
   }
 }

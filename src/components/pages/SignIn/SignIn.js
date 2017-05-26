@@ -8,12 +8,15 @@ import './SignIn.css';
 class SignIn extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      username: '',
+      password: ''
+    }
 
-    this.signin = this.signin.bind(this)
+    this.handLoginClick = this.handLoginClick.bind(this)
   }
 
   render() {
-    console.log(this.props.auth)
     return (
       <div className="signin-container">
         <div className="signin__header">
@@ -32,6 +35,7 @@ class SignIn extends Component {
         <div className="form">
           <form action="#">
             <Input
+              ref={input => this._username = input}
               required="true"
               fieldName="Usuário"
               type="text"
@@ -39,6 +43,7 @@ class SignIn extends Component {
 
             <Input
               required="true"
+              ref={input => this._password = input}
               fieldName="Senha"
               type="password"
             />
@@ -46,7 +51,7 @@ class SignIn extends Component {
             <div className="form-bottom">
               <Button
                 buttonName="Entrar"
-                onClick={this.signin}
+                onClick={this.handLoginClick}
               />
 
               <div className="footer-links">
@@ -64,9 +69,15 @@ class SignIn extends Component {
     );
   }
 
-  signin(event) {
+  handLoginClick(event) {
     event.preventDefault()
-    this.props.authenticate(this.props.auth)
+
+    const payload = {
+      username: this._username.state.inputValue,
+      password: this._password.state.inputValue
+    }
+
+    this.props.authenticate(payload)
   }
 }
 
