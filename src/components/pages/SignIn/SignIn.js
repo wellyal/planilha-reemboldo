@@ -8,11 +8,6 @@ import './SignIn.css';
 class SignIn extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      username: '',
-      password: ''
-    }
-
     this.handLoginClick = this.handLoginClick.bind(this)
   }
 
@@ -42,8 +37,8 @@ class SignIn extends Component {
             />
 
             <Input
-              required="true"
               ref={input => this._password = input}
+              required="true"
               fieldName="Senha"
               type="password"
             />
