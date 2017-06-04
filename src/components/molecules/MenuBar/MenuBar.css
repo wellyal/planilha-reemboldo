@@ -10,6 +10,8 @@
   font-size: 15px;
   text-transform: uppercase;
   cursor: pointer;
+  height: 60px;
+  text-align: center;
 }
 
 .navigation-item a {
@@ -19,6 +21,6 @@
 }
 
 .navigation-item:hover {
-  background: #0951a3;
+  background: #000;
   color: #fff;
 }

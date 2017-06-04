@@ -9,6 +9,12 @@
   color: white;
 }
 
+@media screen and (max-width: 600px){
+  .user-area {
+    display: none;
+  }
+}
+
 .user-area__img img {
   width: 45px;
   height: 45px;

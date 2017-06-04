@@ -14,17 +14,9 @@
   font-size: 13px;
 }
 
-.input-file__icon {
-
-}
-
 .input-file {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
-}
-
-.input-file .input-label {
 }
 
 .input-file input {

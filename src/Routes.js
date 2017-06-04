@@ -11,7 +11,7 @@ import Stylesheet from './components/pages/Stylesheet'
 const Routes = ({ store }) => (
   <Router>
     <div>
-      <Route path="/signIn" component={SignIn} />
+      <Route path="/signin" component={SignIn} />
       <Route path="/home" component={Home} />
       <Route path="/stylesheet" component={Stylesheet} />
     </div>

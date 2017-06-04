@@ -1,3 +1,21 @@
+.stylesheet-container {
+  height: 100vh;
+}
+
+.content-container {
+  height: calc(100% - 60px);
+  position: relative;
+  top: 60px;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 600px){
+  .content-container {
+    top: initial;
+    overflow: auto;
+  }
+}
+
 .form-group {
   display: flex;
   justify-content: space-around;
@@ -11,7 +29,7 @@
 .form-group-table {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin: 50px;
 }
 
 .form-group-col {
