@@ -1,0 +1,35 @@
+.form-group-table {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.form-group-col:first-child {
+  padding-right: 5px;
+}
+
+.form-group-col {
+  padding-right: 15px;
+}
+
+.form-group-col:last-child {
+  padding-right: 0;
+}
+
+.select-col .form-group-table__row.header {
+  visibility: hidden;
+}
+
+.form-group-col.actions {
+  text-align: center;
+}
+
+.form-group-table__row.header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-group-table__row {
+  margin-bottom: 5px;
+  color: #777;
+}
