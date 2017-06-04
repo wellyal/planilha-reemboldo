@@ -4,10 +4,11 @@
 
 .file-area svg {
   cursor: pointer;
+  opacity: .5;
 }
 
 .file-area svg:hover {
-  fill: #0951a3;
+  opacity: 1;
 }
 
 .file-area__file-name {

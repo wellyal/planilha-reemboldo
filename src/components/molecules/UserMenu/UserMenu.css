@@ -9,6 +9,12 @@
   color: white;
 }
 
+.user-area:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  animation: display-none-transition .2s both;
+}
+
 @media screen and (max-width: 600px){
   .user-area {
     display: none;
@@ -55,14 +61,8 @@
 }
 
 .dropdown {
-  display: none;
+  visibility: hidden;
   opacity: 0;
-}
-
-.dropdown-active {
-  display: block;
-  opacity: 1;
-  animation: display-none-transition .2s both;
 }
 
 @keyframes display-none-transition {

@@ -5,6 +5,7 @@ import Input from 'components/atoms/Input'
 import Topbar from 'components/organisms/Topbar'
 import InputFile from 'components/atoms/InputFile'
 import { Grid, Row, Col } from 'react-flexbox-grid';
+
 import './Stylesheet.css'
 
 const Stylesheet = () => {
@@ -56,14 +57,13 @@ const Stylesheet = () => {
                   />
                 </div>
               </Col>
-              <Col xsOffset={10} xs={2} smOffset={11} sm={1}>
-                <div className="form-group__item">
-                  <button className="favicon">+</button>
-                </div>
-              </Col>
             </Row>
           </section>
         </Grid>
+
+        <section className="form-group__add-button">
+          <button className="default">Adiciona Despesa</button>
+        </section>
 
         <section className="form-group-table">
           <ul className="form-group-col">

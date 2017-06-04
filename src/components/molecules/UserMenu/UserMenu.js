@@ -4,26 +4,14 @@ import MenuArrowDown from 'react-icons/lib/fa/caret-down'
 import autobind from 'class-autobind'
 import cx from 'classnames'
 
-import profileImage from './../../../temp/profile.jpg'
+import profileImage from 'temp/profile.jpg'
 
 import './UserMenu.css'
 
 class UserMenu extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isMenuActive: false
-    }
-    autobind(this)
-  }
-
   render() {
-    const { isMenuActive } = this.state
-    const className = cx('dropdown', {'dropdown-active': isMenuActive})
-
     return (
-      <section className="user-area" onClick={this.toggleDropdown}>
+      <section className="user-area">
         <div className="user-area__img">
           <img alt="Profile" src={profileImage} />
         </div>
@@ -36,34 +24,20 @@ class UserMenu extends Component {
             color="white"
           />
         </div>
-        <div className={className}>
-          { this.renderDropdown() }
+        <div className="dropdown">
+          <ul className="user-menu-list">
+            <li className="user-menu-item">
+              <Link to="/profile">Editar Perfil</Link>
+            </li>
+            <li className="user-menu-item">
+              <Link to="/logout">Sair</Link>
+            </li>
+          </ul>
         </div>
       </section>
     )
   }
-
-  toggleDropdown(event) {
-    event.stopPropagation()
-    this.setState({
-      isMenuActive: !this.state.isMenuActive
-    })
-  }
-
-  renderDropdown() {
-    return (
-      <ul className="user-menu-list">
-        <li className="user-menu-item">
-          <Link to="/profile">Editar Perfil</Link>
-        </li>
-        <li className="user-menu-item">
-          <Link to="/logout">Sair</Link>
-        </li>
-      </ul>
-    )
-  }
 }
-
 
 export default UserMenu
 
