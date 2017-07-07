@@ -8,6 +8,7 @@ button {
   cursor: pointer;
   width: 300px;
   margin: 0 auto;
+  outline: none;
 }
 
 button:hover {
@@ -15,7 +16,7 @@ button:hover {
 }
 
 button:disabled {
-  background-color: #F6F6F6;
+  background-color: #ccc;
   color: #DDDCDC;
   cursor: not-allowed;
 }
@@ -37,7 +38,7 @@ button.default:hover {
   opacity: 1;
 }
 
-.favicon {
+button.favicon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -46,6 +47,33 @@ button.default:hover {
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-.favicon:hover {
+button.favicon:hover {
   box-shadow: rgba(0,0,0,0.19)
+}
+
+button.loading {
+  font-size: 0;
+  cursor: not-allowed;
+}
+
+button.loading:before {
+  content: '';
+  margin: 0 auto;
+  display: block;
+  height: 18px;
+  width: 18px;
+  border: 2px solid #fff;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

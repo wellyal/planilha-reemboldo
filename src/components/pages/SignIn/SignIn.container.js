@@ -1,11 +1,11 @@
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { authenticate } from 'reducers/auth'
+import { signin } from 'reducers/signin'
 
 import SignIn from './SignIn'
 
-const mapStateToProps = ({ auth }) => ({ auth })
+const mapStateToProps = ({ signin }) => ({ signin })
 
-const mapDispatchToProps = dispatch => bindActionCreators({ authenticate }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ signin }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignIn)

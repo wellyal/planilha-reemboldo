@@ -17,6 +17,10 @@ storiesOf('Button', module)
     <Button disabled onClick={action('clicked')} buttonName="Confirmar"/>
   ))
 
+  .add('loading', () => (
+    <Button className="loading" onClick={action('clicked')} buttonName="Confirmar"/>
+  ))
+
 storiesOf('Input', module)
   .add('default', () => (
     <Input />

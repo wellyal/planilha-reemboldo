@@ -10,7 +10,7 @@ import Stylesheet from 'components/pages/Stylesheet'
 const Routes = ({ store }) => (
   <Router>
     <div>
-      <Route path="/signin" component={SignIn} />
+      <Route exact path="/" component={SignIn} />
       <Route path="/stylesheet" component={Stylesheet} />
     </div>
   </Router>

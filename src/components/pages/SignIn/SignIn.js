@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import LockIcon from 'react-icons/lib/ti/lock-closed'
 import Input from 'components/atoms/Input'
 import Button from 'components/atoms/Button'
-import { Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import './SignIn.css';
 
@@ -73,9 +73,9 @@ class SignIn extends Component {
       password: this._password.state.inputValue
     }
 
-    this.props.authenticate(payload)
+    this.props.signin(payload)
     return (
-      <Redirect to={{ pathname: "/stylesheet" }}/>
+      this.props.history.push('/stylesheet')
     )
   }
 }
