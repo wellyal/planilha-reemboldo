@@ -1,7 +1,7 @@
 import { configure } from '@kadira/storybook'
 
-function loadStories() {
-  require('../stories')
-}
+const requires = require.context('../', true, /storybook\.js$/)
+
+const loadStories = () => requires.keys().forEach(requires)
 
 configure(loadStories, module)
