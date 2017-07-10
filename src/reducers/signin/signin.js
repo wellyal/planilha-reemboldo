@@ -24,7 +24,7 @@ const reducer = handleActions({
   [actionTypes.SUCCESS](state, {payload}) {
     return {
       ...state,
-      data: payload
+      data: payload.data
     }
   },
   [actionTypes.FAILURE](state, {payload}) {

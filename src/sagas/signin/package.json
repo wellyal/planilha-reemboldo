@@ -1,0 +1,4 @@
+{
+  "name": "SignIn Saga Module",
+  "main": "./signin"
+}

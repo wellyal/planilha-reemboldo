@@ -1,15 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
-import rootReducer from './reducers'
+import createSagaMiddleware from 'redux-saga'
 
+import rootReducer from './reducers'
+import rootSaga from './sagas'
 import Routes from './Routes';
 import './index.css';
 
+const sagaMiddleware = createSagaMiddleware()
+
 let store = createStore(
-  rootReducer, /* preloadedState, */
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  rootReducer,
+  compose(
+    applyMiddleware(sagaMiddleware),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
 )
 
 ReactDOM.render(
@@ -17,4 +24,6 @@ ReactDOM.render(
     <Routes store={store} />
   </Provider>,
   document.getElementById('root')
-);
+)
+
+sagaMiddleware.run(rootSaga)
