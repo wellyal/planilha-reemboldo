@@ -1,18 +1,40 @@
+import { createAction, handleActions } from 'redux-actions'
 
-export const SIGNIN = 'planilha_reembolso/signin/AUTHENTICATE';
-
-export default function reducer (state = {}, action) {
-  switch(action.type) {
-    case SIGNIN:
-      return action.payload
-    default:
-      return state
-  }
+export const actionTypes = {
+  REQUEST: 'planilha_reembolso/signin/REQUEST',
+  SUCCESS: 'planilha_reembolso/signin/SUCCESS',
+  FAILURE: 'planilha_reembolso/signin/FAILURE'
 }
 
-export const signin = (payload) => {
-  return {
-    type: SIGNIN,
-    payload: payload
-  }
+const signinRequest = createAction(actionTypes.REQUEST)
+
+const defaultState = {
+  isFetching: false,
+  data: null,
+  error: null
 }
+
+const reducer = handleActions({
+  [actionTypes.REQUEST](state) {
+    return {
+      ...state,
+      isFetching: true
+    }
+  },
+  [actionTypes.SUCCESS](state, {payload}) {
+    return {
+      ...state,
+      data: payload
+    }
+  },
+  [actionTypes.FAILURE](state, {payload}) {
+    return {
+      ...state,
+      error: payload
+    }
+  }
+}, defaultState)
+
+export const signin = payload => signinRequest()
+
+export default reducer

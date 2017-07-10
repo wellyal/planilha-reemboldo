@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-.navigation-item a {
+.navigation-item span {
   color: #fff;
   padding: 0 10px;
   display: block;
@@ -22,5 +22,10 @@
 
 .navigation-item:hover {
   background: #000;
+  color: #fff;
+}
+
+.navigation-item.active {
+  background: #2c6cc3;
   color: #fff;
 }

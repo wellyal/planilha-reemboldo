@@ -2,14 +2,12 @@ import React, { Component } from 'react'
 import LockIcon from 'react-icons/lib/ti/lock-closed'
 import Input from 'components/atoms/Input'
 import Button from 'components/atoms/Button'
-import { Link } from 'react-router-dom'
 
 import './SignIn.css';
 
 class SignIn extends Component {
   constructor(props) {
-    super(props);
-    this.handLoginClick = this.handLoginClick.bind(this)
+    super(props)
   }
 
   render() {
@@ -62,10 +60,10 @@ class SignIn extends Component {
           </form>
         </div>
       </div>
-    );
+    )
   }
 
-  handLoginClick(event) {
+  handLoginClick = event => {
     event.preventDefault()
 
     const payload = {
@@ -74,9 +72,7 @@ class SignIn extends Component {
     }
 
     this.props.signin(payload)
-    return (
-      this.props.history.push('/stylesheet')
-    )
+    this.props.history.push('/app/stylesheet')
   }
 }
 

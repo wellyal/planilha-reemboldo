@@ -1,6 +1,6 @@
 import React from 'react'
-import EditIcon from 'react-icons/lib/ti/edit'
-import DeleteIcon from 'react-icons/lib/ti/trash'
+// import EditIcon from 'react-icons/lib/ti/edit'
+// import DeleteIcon from 'react-icons/lib/ti/trash'
 import Input from 'components/atoms/Input'
 import Topbar from 'components/organisms/Topbar'
 import InputFile from 'components/atoms/InputFile'
