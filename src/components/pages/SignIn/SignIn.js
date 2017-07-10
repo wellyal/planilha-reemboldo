@@ -6,9 +6,6 @@ import Button from 'components/atoms/Button'
 import './SignIn.css';
 
 class SignIn extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   render() {
     return (
