@@ -12,10 +12,7 @@ class SignIn extends Component {
       <div className="signin-container">
         <div className="signin__header">
           <figure className="header__signin-icon">
-            <LockIcon
-              size={50}
-              color="white"
-            />
+            <LockIcon size={50} color="white" />
           </figure>
         </div>
 

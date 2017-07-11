@@ -1,0 +1,35 @@
+.listitem {
+  display: none;
+}
+
+.listitem-label {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.listitem + .listitem-label:before {
+  content: '';
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px; height: 10px;
+  padding: 2px; margin-right: 10px;
+}
+
+.listitem:checked + .listitem-label:after {
+  content: "";
+  padding: 2px;
+  position: absolute;
+  width: 1px;
+  height: 5px;
+  border: solid #022b56;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  top: 5px;
+  left: 5px;
+}

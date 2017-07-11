@@ -1,6 +1,6 @@
 import React from 'react'
-import MenuBar from './../../molecules/MenuBar'
-import UserMenu from './../../molecules/UserMenu'
+import MenuBar from 'components/molecules/MenuBar'
+import UserMenu from 'components/molecules/UserMenu'
 
 import './Topbar.css'
 
