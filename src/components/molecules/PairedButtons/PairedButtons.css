@@ -1,0 +1,47 @@
+.pairedbuttons-container {
+  text-align: center;
+}
+
+.pairedbuttons {
+  background: transparent;
+  height: 50px;
+  border: 1px solid #2c6cc3;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 0 auto;
+  outline: 0;
+  width: 80px;
+}
+
+.pairedbuttons:hover {
+  background-color: #0951a3;
+}
+
+.pairedbuttons:hover > svg {
+  fill: #fff;
+}
+
+.pairedbuttons:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  background: transparent;
+}
+
+.pairedbuttons:disabled:hover > svg {
+  fill: #2c6cc3;
+}
+
+.pairedbuttons.left-side {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 0;
+}
+
+.pairedbuttons.right-side {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+}

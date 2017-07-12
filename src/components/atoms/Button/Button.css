@@ -1,6 +1,6 @@
 button {
   color: white;
-  background: #2c6cc3;
+  background: transparent;
   font-size: 22px;
   height: 50px;
   border: none;
@@ -11,18 +11,13 @@ button {
   outline: none;
 }
 
-button:hover {
-  background-color: #0951a3
-}
-
 button:disabled {
-  background-color: #ccc;
-  color: #DDDCDC;
+  opacity: .5;
   cursor: not-allowed;
+  background: transparent;
 }
 
 button.default {
-  background: transparent;
   font-size: 22px;
   height: 50px;
   border: 1px solid #2c6cc3;
@@ -31,11 +26,28 @@ button.default {
   width: 215px;
   margin: 0 auto;
   color: #2c6cc3;
-  opacity: .5;
 }
 
 button.default:hover {
-  opacity: 1;
+  background-color: #0951a3;
+  color: #fff;
+}
+
+button.secondary {
+  font-size: 22px;
+  height: 50px;
+  border: 1px solid #2c6cc3;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #2c6cc3;
+}
+
+button.secondary:hover {
+  background-color: #0951a3;
+  color: #fff;
 }
 
 button.favicon {

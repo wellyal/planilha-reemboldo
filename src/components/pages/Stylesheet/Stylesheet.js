@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
-// import EditIcon from 'react-icons/lib/ti/edit'
-// import DeleteIcon from 'react-icons/lib/ti/trash'
-import Input from 'components/atoms/Input'
-import Topbar from 'components/organisms/Topbar'
-import InputFile from 'components/atoms/InputFile'
-import StylesheetContent from 'components/organisms/StylesheetContent'
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import EditIcon from 'react-icons/lib/ti/edit'
+import DeleteIcon from 'react-icons/lib/ti/trash'
+import Input from 'components/atoms/Input'
+import InputFile from 'components/atoms/InputFile'
+import PairedButtons from 'components/molecules/PairedButtons'
+import Topbar from 'components/organisms/Topbar'
+import StylesheetContent from 'components/organisms/StylesheetContent'
 
 import './Stylesheet.css'
 
 class Stylesheet extends Component {
   render() {
-    console.log(this.props.stylesheet)
     return (
       <div className="stylesheet-container">
         <Topbar />
@@ -72,6 +72,13 @@ class Stylesheet extends Component {
             <button className="default" onClick={this.handleClick}>
               Adicionar Despesa
             </button>
+          </section>
+
+          <section className="form-group__add-button">
+            <PairedButtons>
+              <EditIcon size={30} color="#2c6cc3"/>
+              <DeleteIcon size={30} color="#2c6cc3"/>
+            </PairedButtons>
           </section>
 
           {
