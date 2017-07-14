@@ -4,7 +4,11 @@ import Button from './Button'
 
 storiesOf('Button', module)
   .add('default', () => (
-    <Button onClick={action('clicked')} buttonName="Login"/>
+    <Button className="default" onClick={action('clicked')} buttonName="Login"/>
+  ))
+
+  .add('secondary', () => (
+    <Button className="secondary" onClick={action('clicked')} buttonName="Login"/>
   ))
 
   .add('favicon', () => (
@@ -16,5 +20,12 @@ storiesOf('Button', module)
   ))
 
   .add('loading', () => (
-    <Button className="loading" onClick={action('clicked')} buttonName="Confirmar"/>
+    <section>
+      <div>
+        <Button className="loading secondary" onClick={action('clicked')} buttonName="Confirmar"/>
+      </div>
+      <div>
+        <Button className="loading default" onClick={action('clicked')} buttonName="Confirmar"/>
+      </div>
+    </section>
   ))
