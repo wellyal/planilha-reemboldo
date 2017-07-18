@@ -17,19 +17,22 @@
   border: 2px solid #ddd;
   display: inline-block;
   vertical-align: middle;
-  width: 10px; height: 10px;
-  padding: 2px; margin-right: 10px;
+  width: 13px;
+  height: 12px;
+  padding: 2px;
+  margin-right: 10px;
+  margin-bottom: 4px;
 }
 
 .listitem:checked + .listitem-label:after {
   content: "";
-  padding: 2px;
+  padding: 3px;
   position: absolute;
   width: 1px;
   height: 5px;
   border: solid #022b56;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
-  top: 5px;
-  left: 5px;
+  top: 2px;
+  left: 6px;
 }

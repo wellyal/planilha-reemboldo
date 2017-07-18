@@ -25,9 +25,6 @@ class UserMenu extends Component {
         <div className="dropdown">
           <ul className="user-menu-list">
             <li className="user-menu-item">
-              <Link to="app/profile">Editar Perfil</Link>
-            </li>
-            <li className="user-menu-item">
               <Link to="/">Sair</Link>
             </li>
           </ul>

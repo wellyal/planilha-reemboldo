@@ -3,6 +3,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import EditIcon from 'react-icons/lib/ti/edit'
 import DeleteIcon from 'react-icons/lib/ti/trash'
 import Input from 'components/atoms/Input'
+import Button from 'components/atoms/Button'
 import InputFile from 'components/atoms/InputFile'
 import PairedButtons from 'components/molecules/PairedButtons'
 import Topbar from 'components/organisms/Topbar'
@@ -69,9 +70,9 @@ class Stylesheet extends Component {
           </Grid>
 
           <section className="form-group__add-button">
-            <button className="default" onClick={this.handleClick}>
+            <Button className="default" onClick={this.handleClick}>
               Adicionar Despesa
-            </button>
+            </Button>
           </section>
 
           <section className="form-group__add-button">

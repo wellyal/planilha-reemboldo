@@ -37,11 +37,9 @@ class SignIn extends Component {
             />
 
             <div className="form-bottom">
-              <Button
-                buttonName="Entrar"
-                className="secondary"
-                onClick={this.handLoginClick}
-              />
+              <Button className="secondary" onClick={this.handLoginClick}>
+                Entrar
+              </Button>
 
               <div className="footer-links">
                 <div className="footer-links__item">

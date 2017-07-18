@@ -2,22 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './Button.css'
 
-const Button = ({ buttonName, ...props }) => {
+const Button = props => {
   return (
-    <button
-      {...props}
-    >
-      {buttonName}
+    <button {...props}>
+      {props.children}
     </button>
   )
-}
-
-Button.propTypes = {
-  buttonName: PropTypes.string.isRequired
-}
-
-Button.defaultProps = {
-  buttonName: 'OK'
 }
 
 export default Button
