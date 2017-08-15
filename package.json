@@ -44,6 +44,8 @@
     "@kadira/storybook": "^2.21.0"
   },
   "dependencies": {
+    "@storybook/addon-backgrounds": "^3.0.0",
+    "@storybook/addons": "^3.1.6",
     "autoprefixer": "^6.7.2",
     "axios": "^0.16.2",
     "class-autobind": "^0.1.4",
